@@ -62,5 +62,12 @@
     @if (promiseValue | async; as value) {
         <p class="text-primary">{{value}}</p>
     }
+    <h3>Observable</h3>
+    <p> {{  myObservable | async }}  </p>
+    @if (myObservable | async; as value ){
+      <p>Valor : {{ value }}</p>
+    } @else {
+      <p>Esperando valor...</p>
+    }
   </app-card>
 </section>

@@ -10,6 +10,7 @@ import {
   TitleCasePipe,
   UpperCasePipe
 } from '@angular/common';
+import {interval, tap} from 'rxjs';
 
 const client1={
   name:'Fernando',
@@ -85,4 +86,6 @@ export default class UncommonPage {
           console.log(`tenemos data en la promes`);
     },3500);
   })
+  myObservable=interval(2000).pipe(
+    tap((value) => console.log('tick', value)))
 }
