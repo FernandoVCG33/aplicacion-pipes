@@ -43,6 +43,16 @@
   </app-card>
 
   <app-card title="KeyValuePipe" >
-    <pre class="text-primary" >{{ person | keyvalue | json }}</pre>
+    <ul>
+      @for (item of person | keyvalue ; track $index){
+        <li>
+          <span class="text-primary" >
+            {{item.key | titlecase }}:
+            <strong class="text-secondary">   {{item.value}} </strong>
+          </span>
+        </li>
+      }
+    </ul>
+
   </app-card>
 </section>
