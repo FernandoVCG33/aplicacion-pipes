@@ -78,4 +78,11 @@ export default class UncommonPage {
     address:'Ottawa, Canada',
     profession:'Software Developer'
   }
+  // Async Pipe
+  promiseValue:Promise<string>=new Promise((resolve, reject)=>{
+    setTimeout(() => {
+          resolve(`tenemos data en la promesa`);
+          console.log(`tenemos data en la promes`);
+    },3500);
+  })
 }
