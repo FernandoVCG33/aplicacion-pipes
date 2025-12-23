@@ -24,13 +24,15 @@ const client2={
 })
 export default class UncommonPage {
   client=signal(client1);
+
   invitationMap={
     male:'invitarlo',
     female:'invitarla',
-  }
+  };
   changeClient(){
-    if(this.client()==client1){
-      this.client.set(client2)
+    if( this.client() === client1){
+      this.client.set(client2);
+      return;
     }
     this.client.set(client1);
   }
