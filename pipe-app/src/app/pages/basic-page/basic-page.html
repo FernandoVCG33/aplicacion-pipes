@@ -29,4 +29,42 @@
       <div class="stat-desc">{{fullName()}}</div>
     </div>
   </div>
+
 </section>
+<!-- Estadisticas de ejemplo de daisyui -->
+<div class="dicider">
+  <div class="stats shadow">
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+      </div>
+      <div class="stat-title">Date Pipe</div>
+      <div class="stat-value"> {{customDate() | date }} </div>
+      <div class="stat-desc">{{customDate()}}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+      </div>
+      <div class="stat-title">Date || long ||GTM-6</div>
+      <div class="stat-value">{{customDate() | date:'long': 'GMT-6'}}</div>
+      <div class="stat-desc">{{customDate()}}</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="gap-2 flex flex-row">
+    <h1 class="text-2xl font-bold">Local Actual :
+      <span class="badge badge-secondary">ES
+      </span>
+    </h1>
+    <button class="btn btn-secondary ">
+      changer en francais
+    </button>
+    <button class="btn btn-secondary ">
+      changer to english
+    </button>
+    <button class="btn btn-secondary ">
+      Cambiar a español
+    </button>
+
+  </div>
+</div>

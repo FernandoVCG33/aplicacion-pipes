@@ -1,8 +1,13 @@
 import {Component, signal} from '@angular/core';
+import {CurrencyPipe, DecimalPipe, PercentPipe} from '@angular/common';
 
 @Component({
   selector: 'app-numbers-page',
-  imports: [],
+  imports: [
+    DecimalPipe,
+    CurrencyPipe,
+    PercentPipe,
+  ],
   templateUrl: './numbers-page.html',
 })
 export default class NumbersPage {

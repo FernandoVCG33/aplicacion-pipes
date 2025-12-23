@@ -7,25 +7,33 @@
       <div class="stat-figure text-secondary">
 
       </div>
-      <div class="stat-title">Downloads</div>
-      <div class="stat-value">31K</div>
-      <div class="stat-desc">Jan 1st - Feb 1st</div>
+      <div class="stat-title">Number: '1.2-2'  </div>
+      <div class="stat-value"> {{totalSell() | number:"1.2-2"}} </div>
+      <div class="stat-desc"> {{totalSell()}} </div>
     </div>
 
     <div class="stat">
       <div class="stat-figure text-secondary">
       </div>
-      <div class="stat-title">New Users</div>
-      <div class="stat-value">4,200</div>
-      <div class="stat-desc">↗︎ 400 (22%)</div>
+      <div class="stat-title">Number: "1.1-2"</div>
+      <div class="stat-value"> {{totalSell() +1234 | number:"1.2-2"}}  </div>
+      <div class="stat-desc"> {{totalSell()}} </div>
     </div>
 
     <div class="stat">
       <div class="stat-figure text-secondary">
       </div>
-      <div class="stat-title">New Registers</div>
-      <div class="stat-value">1,200</div>
-      <div class="stat-desc">↘︎ 90 (14%)</div>
+      <div class="stat-title"> Currency </div>
+      <div class="stat-value">  {{totalSell() | currency:"Bs."}} </div>
+      <div class="stat-desc">{{totalSell()}}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+      </div>
+      <div class="stat-title"> Percent </div>
+      <div class="stat-value">  {{percet() | percent:'1.2-2'}} </div>
+      <div class="stat-desc">{{percet()}}</div>
     </div>
   </div>
 
