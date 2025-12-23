@@ -1,1 +1,32 @@
-<p>basic-page works!</p>
+<section class="mx-5">
+  <h1 class="text-2xl">Pipies Basicos</h1>
+  <h3 class="text-xl font-thin">Pipes inluidos en Angular</h3>
+  <div class="stats shadow lg:stats-horizontal shadow w-full">
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+
+      </div>
+      <div class="stat-title">Lower Case Pipe</div>
+      <div class="stat-value"> {{nameUpper()| lowercase  }}  </div>
+      <div class="stat-desc"> {{nameUpper()}} </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+
+      </div>
+      <div class="stat-title">Uppercase Pipe</div>
+      <div class="stat-value">{{nameLower() | uppercase}}</div>
+      <div class="stat-desc">{{nameLower()}}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+
+      </div>
+      <div class="stat-title">TitleCase Pipe</div>
+      <div class="stat-value">{{fullName() | titlecase}}</div>
+      <div class="stat-desc">{{fullName()}}</div>
+    </div>
+  </div>
+</section>
