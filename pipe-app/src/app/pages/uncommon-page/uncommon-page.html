@@ -6,12 +6,43 @@
 <section class="grid  grid-cols1 md:grid-cols-2 xl:grid-cols-3 gap-4">
   <app-card title="i18nSelectPipe" >
     <p> Saludos {{client().name}} , es un placer
-      {{ client().gender | i18nSelect:invitationMap }} a nuestro evento
+      {{ client().gender | i18nSelect: invitationMap }} a nuestro evento
     </p>
     <button class="btn btn-secondary"
             (click)="changeClient()"
     >
       Cambiar Cliente
     </button>
+  </app-card>
+
+  <app-card title="i18nPluralPipe" >
+    <p> Actualmente {{ clients().length | i18nPlural:clientsMap() }} personas esperando
+    </p>
+    <button
+      [disabled]="clients().length ==0"
+      class="btn btn-secondary"
+            (click)="deleteClient()"
+    >
+      Borrar cliente
+    </button>
+  </app-card>
+  <app-card title="i18nSlicePipe" >
+      <b>Original</b>
+      <p class="text-primary">
+        {{ clients().join(" ") }}
+      </p>
+      <b class="mt-2">Slice: 1 - 2 </b>
+      <p class="text-primary">
+        {{clients() | slice:1:2 }}
+      </p>
+  </app-card>
+
+  <app-card title="JsonPipe" >
+    <pre class="text-primary" >{{ clients().join(", ")  | json | uppercase }}</pre>
+    <p class="text-primary" >{{ clients().join(", ")  | json | uppercase }}</p>
+  </app-card>
+
+  <app-card title="KeyValuePipe" >
+    <pre class="text-primary" >{{ person | keyvalue | json }}</pre>
   </app-card>
 </section>
