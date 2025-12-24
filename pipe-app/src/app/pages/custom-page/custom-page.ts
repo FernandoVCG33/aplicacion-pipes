@@ -25,4 +25,5 @@ export default class CustomPage {
 
     heroes=signal(heroes);
     sortBy=signal<keyof Hero | null>(null);
+    search=signal('');
 }
