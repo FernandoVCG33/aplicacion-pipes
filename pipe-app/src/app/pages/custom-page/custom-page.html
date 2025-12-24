@@ -6,7 +6,7 @@
 <div class="stats shadow">
   <div class="stat">
     <div class="stat-title">Toggle case pipe</div>
-    <div class="stat-value">{{ name() | toggleCase:upperCase() }}</div>
+    <div class="stat-value">{{ name() | toggleCase:upperCase()    }}</div>
     <div class="stat-desc"> {{name()}} </div>
     <button class="btn btn-primary mt-2"
         (click)="upperCase.set(!upperCase())"
@@ -63,8 +63,7 @@
 
           </td>
           <td>
-            <span> {{hero.creator == 1  }}   </span>
-
+            <span> {{ hero.creator | heroCreatorPipe  }}  </span>
           </td>
         </tr>
       }
