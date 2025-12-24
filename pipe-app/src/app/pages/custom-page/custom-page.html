@@ -45,9 +45,27 @@
         <tr>
           <td> {{$index+1}} </td>
           <td>  {{hero.name}} </td>
-          <td>  {{hero.canFly}}  </td>
-          <td>  {{hero.color}} </td>
-          <td>  {{hero.creator}} </td>
+          <td>
+            <span
+                class="text-xs w-44"
+                [class.text-success]="hero.canFly"
+                [class.text-error]="!hero.canFly"
+            >
+              {{hero.canFly ? 'No Puede volar' : 'Puede volar'}}
+            </span>
+          </td>
+          <td>
+            <span class="text-xs w-44"
+                  [style.color]="hero.color | heroColor"
+            >
+              {{hero.color  | heroColor }}
+            </span>
+
+          </td>
+          <td>
+            <span> {{hero.creator == 1  }}   </span>
+
+          </td>
         </tr>
       }
 

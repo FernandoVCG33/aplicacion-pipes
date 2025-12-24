@@ -1,11 +1,13 @@
 import {Component, signal} from '@angular/core';
 import {ToggleCasePipe} from '../../pipes/toggle-case.pipe';
 import {heroes} from '../../data/heroes.data';
+import {NamePipe} from '../../interfaces/color-hero.pipe';
 
 @Component({
   selector: 'app-custom-page',
   imports: [
-    ToggleCasePipe
+    ToggleCasePipe,
+    NamePipe
   ],
   templateUrl: './custom-page.html',
 })
