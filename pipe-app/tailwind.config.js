@@ -1,16 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-const {required} = require("@angular/forms/signals");
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [
-      require('daisyui'),
+    require('daisyui'),
   ],
-  daisyui: {
-    themes: [ 'dracula' ]
-  }
 }
-
