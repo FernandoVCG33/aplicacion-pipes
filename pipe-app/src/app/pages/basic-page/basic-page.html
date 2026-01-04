@@ -1,72 +1,67 @@
 <section class="mx-5">
-  <h1 class="text-2xl">Pipies Basicos</h1>
-  <h3 class="text-xl font-thin">Pipes inluidos en Angular</h3>
-  <div class="stats shadow lg:stats-horizontal shadow w-full">
-    <div class="stat">
-      <div class="stat-figure text-secondary">
+  <h1 class="text-2xl">Pipes Básicos</h1>
+  <h3 class="text-xl font-thin">Pipes incluidos en Angular</h3>
 
-      </div>
+  <!-- Se mantiene vertical en móviles y pasa a horizontal en pantallas grandes (lg) -->
+  <div class="stats shadow stats-vertical lg:stats-horizontal w-full mt-4">
+    <div class="stat">
       <div class="stat-title">Lower Case Pipe</div>
       <div class="stat-value"> {{nameUpper()| lowercase  }}  </div>
       <div class="stat-desc"> {{nameUpper()}} </div>
     </div>
 
     <div class="stat">
-      <div class="stat-figure text-secondary">
-
-      </div>
       <div class="stat-title">Uppercase Pipe</div>
       <div class="stat-value">{{nameLower() | uppercase}}</div>
       <div class="stat-desc">{{nameLower()}}</div>
     </div>
 
     <div class="stat">
-      <div class="stat-figure text-secondary">
-
-      </div>
       <div class="stat-title">TitleCase Pipe</div>
       <div class="stat-value">{{fullName() | titlecase}}</div>
       <div class="stat-desc">{{fullName()}}</div>
     </div>
   </div>
-
 </section>
-<!-- Estadisticas de ejemplo de daisyui -->
-<div class="dicider">
-  <div class="stats shadow">
+
+<div class="divider"></div>
+
+<section class="mx-5">
+  <!-- Se mantiene vertical en móviles y pasa a horizontal en pantallas medianas (md) -->
+  <div class="stats shadow stats-vertical md:stats-horizontal w-full mt-4">
     <div class="stat">
-      <div class="stat-figure text-secondary">
-      </div>
       <div class="stat-title">Date Pipe</div>
       <div class="stat-value"> {{customDate() | date }} </div>
       <div class="stat-desc">{{customDate()}}</div>
     </div>
 
     <div class="stat">
-      <div class="stat-figure text-secondary">
-      </div>
-      <div class="stat-title">Date || long ||GTM-6</div>
+      <div class="stat-title">Date || long || GTM-6</div>
       <div class="stat-value">{{customDate() | date:'long': 'GMT-6'}}</div>
       <div class="stat-desc">{{customDate()}}</div>
     </div>
   </div>
-  <div class="divider"></div>
-  <div class="gap-2 flex flex-row">
-    <h1 class="text-2xl font-bold">Local Actual :
-      <span class="badge badge-secondary">{{currentLocal()}}
-      </span>
-    </h1>
-    <button class="btn btn-secondary "
-            (click)="changeLocal('fr')"
-    >
-      changer en francais
-    </button>
-    <button class="btn btn-secondary "  (click)="changeLocal('en')"  >
-      changer to english
-    </button>
-    <button class="btn btn-secondary " (click)="changeLocal('es')" >
-      Cambiar a español
-    </button>
 
+  <div class="divider"></div>
+
+  <!-- Contenedor de botones que se apila en móvil y se alinea en pantallas más grandes -->
+  <div class="flex flex-col md:flex-row md:items-center gap-4 mt-4">
+    <h1 class="text-2xl font-bold">
+      Local Actual:
+      <span class="badge badge-secondary">{{currentLocal()}}</span>
+    </h1>
+
+    <!-- Contenedor para los botones -->
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-secondary" (click)="changeLocal('fr')">
+        Changer en français
+      </button>
+      <button class="btn btn-secondary" (click)="changeLocal('en')">
+        Change to English
+      </button>
+      <button class="btn btn-secondary" (click)="changeLocal('es')">
+        Cambiar a español
+      </button>
+    </div>
   </div>
-</div>
+</section>
