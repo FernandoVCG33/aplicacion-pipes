@@ -7,10 +7,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("daisyui"), // <--- ESTA LÍNEA ES VITAL
+    require("daisyui"),
   ],
-  // Opcional: Configuración de temas para tu Taller
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
 }
